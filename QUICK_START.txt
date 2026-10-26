@@ -1,0 +1,21 @@
+SYLVON PORTFOLIO - QUICK START (WINDOWS)
+========================================
+1. Extract this ZIP into a NEW folder. Do not merge with an older project.
+2. Double-click START_PORTFOLIO.bat in the extracted folder.
+3. Open http://localhost:3000 in your browser.
+
+Alternative in Command Prompt, from this folder:
+   npm run dev
+
+EXPECTED MESSAGE:
+   Portfolio running at http://localhost:3000
+
+WRONG MESSAGE:
+   edufocus-independent-rebuild
+   node --watch server.mjs
+
+If you see the wrong message, you are running EduFocus, not the portfolio.
+If port 3000 is already occupied, stop the other local server with Ctrl+C.
+
+The portfolio package.json must say "name": "sylvon-portfolio-showroom".
+The showroom preview pages are under previews/.

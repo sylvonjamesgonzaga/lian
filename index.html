@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090b0d" />
+  <meta name="description" content="Portfolio and interactive design showroom by Sylvon James — developer, designer and creative builder." />
+  <meta property="og:title" content="Sylvon James — Creative Developer & Design Showroom" />
+  <meta property="og:description" content="Thoughtful digital products, experimental interfaces and live interactive design previews." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Sylvon James — Portfolio & Design Showroom</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-halo" id="cursor-halo" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="Sylvon James home"><span class="brand-mark">S<span>J</span><span class="brand-mark-dot">.</span></span><span class="brand-meta">Portfolio <span class="brand-year">©26</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#work" data-nav>Work<span class="nav-num">01</span></a>
+        <a href="#showroom" data-nav>Showroom<span class="nav-num">02</span></a>
+        <a href="#about" data-nav>About<span class="nav-num">03</span></a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light theme" title="Toggle theme"><span class="theme-icon">◐</span></button>
+        <a class="header-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#work">Selected work <span>01 ↗</span></a><a href="#showroom">Design showroom <span>02 ↗</span></a><a href="#about">About me <span>03 ↗</span></a><a href="#contact">Get in touch <span>04 ↗</span></a></nav>
+  </header>
+
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-ambient hero-ambient-one" aria-hidden="true"></div>
+      <div class="hero-ambient hero-ambient-two" aria-hidden="true"></div>
+      <div class="hero-topline"><span class="mini-index">[ 01 — INTRO ]</span><span class="availability"><span class="availability-dot"></span><span id="availability-text">Open for collaborations</span></span></div>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow" id="hero-eyebrow">INDEPENDENT CREATIVE DEVELOPER / 2026</p>
+          <h1 id="hero-title"><span id="hero-title-top">Turning ideas</span><span class="hero-headline-bottom"><em>into</em> experiences<span class="period">.</span></span></h1>
+          <div class="hero-lower"><p class="hero-description" id="hero-description">I build thoughtful digital products, explore bold interfaces, and turn ambitious concepts into things you can actually use.</p><div class="hero-links"><a class="btn-primary" href="#showroom">Explore showroom <span aria-hidden="true">↗</span></a><a class="btn-text" href="#work">View selected work <span aria-hidden="true">↓</span></a><a class="btn-text" id="resume-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Résumé <span aria-hidden="true">↗</span></a></div></div>
+        </div>
+        <div class="hero-art" aria-label="Abstract interactive design sculpture">
+          <div class="orb-glow"></div>
+          <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="orbit-cross orbit-cross-one"></div><div class="orbit-cross orbit-cross-two"></div>
+          <div class="sculpture"><div class="sculpture-core"></div><div class="sculpture-ring sculpture-ring-a"></div><div class="sculpture-ring sculpture-ring-b"></div><div class="sculpture-ring sculpture-ring-c"></div></div>
+          <div class="art-label art-label-top">DESIGN ↗ BUILD<span>001</span></div><div class="art-label art-label-bottom">MAKE IT REAL <span>✳</span></div>
+          <div class="orb-crosshair orb-crosshair-one">+</div><div class="orb-crosshair orb-crosshair-two">+</div>
+        </div>
+      </div>
+      <div class="hero-footer"><div class="hero-scroll"><span class="scroll-line"></span> SCROLL TO EXPLORE</div><div class="hero-coordinate" id="hero-location">BASED IN THE PHILIPPINES <span>↗</span></div></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>DESIGN WITH INTENT</span><b>✳</b><span>DEVELOP WITH PURPOSE</span><b>✳</b><span>MAKE THE WEB FEEL ALIVE</span><b>✳</b><span>DESIGN WITH INTENT</span><b>✳</b><span>DEVELOP WITH PURPOSE</span><b>✳</b><span>MAKE THE WEB FEEL ALIVE</span><b>✳</b></div></div>
+
+    <section id="work" class="section work-section shell" aria-labelledby="work-title">
+      <div class="section-intro reveal"><p class="section-kicker"><span class="kicker-dot"></span> 02 / THE WORK</p><div class="section-heading-row"><h2 id="work-title">Selected <em>work.</em></h2><p>Different challenges. One obsession: building things that feel right and work even better.</p></div></div>
+      <div id="project-grid" class="project-grid"></div>
+      <div class="work-footnote reveal"><span>BEHIND EVERY PROJECT IS A PROBLEM WORTH SOLVING.</span><span>↘</span></div>
+    </section>
+
+    <section id="showroom" class="section showroom-section" aria-labelledby="showroom-title">
+      <div class="shell">
+        <div class="section-intro reveal"><p class="section-kicker"><span class="kicker-dot"></span> 03 / THE PLAYGROUND</p><div class="section-heading-row showroom-heading-row"><div><h2 id="showroom-title">The design <em>showroom.</em></h2><p class="showroom-subtitle">Not just screenshots. <strong>Step inside the experience.</strong></p></div><p>A curated space for interactive ideas. Click any design to explore a real, working preview — right here.</p></div></div>
+        <div class="showroom-toolbar reveal"><div class="showroom-filters" role="group" aria-label="Filter showroom designs"><button class="filter-btn active" data-filter="All" aria-pressed="true">All designs <span id="filter-all-count">03</span></button><button class="filter-btn" data-filter="Dashboard" aria-pressed="false">Dashboard</button><button class="filter-btn" data-filter="E-commerce" aria-pressed="false">E-commerce</button><button class="filter-btn" data-filter="Mobile" aria-pressed="false">Mobile apps</button></div><span class="showroom-toolbar-note"><span class="live-dot"></span> LIVE & INTERACTIVE</span></div>
+        <div id="showroom-grid" class="showroom-grid"></div>
+        <div class="showroom-bottom reveal"><div class="showroom-bottom-icon">✳</div><div><strong>Your ideas, brought to life.</strong><p>Real Figma prototypes and deployed websites can be added to this same showroom.</p></div><a href="#contact" class="inline-arrow-link">Have a project in mind? ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section expertise-section shell" aria-labelledby="expertise-title"><div class="section-intro reveal"><p class="section-kicker"><span class="kicker-dot"></span> 04 / THE TOOLKIT</p><div class="section-heading-row"><h2 id="expertise-title">A little bit of <em>everything.</em></h2><p>From the first sketch to the final commit, I like knowing how all the pieces fit together.</p></div></div><div class="expertise-grid" id="expertise-grid"></div></section>
+
+    <section id="about" class="section about-section" aria-labelledby="about-title"><div class="shell about-layout"><div class="about-art reveal"><span class="about-art-corner">[ A LITTLE ABOUT ME ]</span><div class="about-giant-s">S<span>J</span></div><div class="about-art-footer"><span>Curious by default.<br/>Builder by nature.</span><span>✳ 2026</span></div></div><div class="about-copy reveal"><p class="section-kicker"><span class="kicker-dot"></span> 05 / THE HUMAN SIDE</p><h2 id="about-title">More than <em>pixels & code.</em></h2><p class="about-lead">Hey, I'm <span id="about-name">Sylvon.</span> Nice to meet you.</p><p id="about-description">I’m an Information Technology student and hands-on builder who loves connecting design and engineering.</p><div class="about-facts"><div><span>01 / APPROACH</span><strong>Curiosity first. Details always.</strong></div><div><span>02 / PHILOSOPHY</span><strong>Build for people, not just pixels.</strong></div><div><span>03 / BASE</span><strong>Philippines · Working everywhere</strong></div></div><a href="#contact" class="about-cta">Let's work together <span>↗</span></a></div></div></section>
+
+    <section id="contact" class="contact-section shell"><div class="contact-inner reveal"><p class="section-kicker"><span class="kicker-dot"></span> 06 / WHAT'S NEXT?</p><div class="contact-title-wrap"><h2>Have something <em>in mind?</em></h2><span class="contact-sparkle" aria-hidden="true">✳</span></div><div class="contact-bottom"><p>Let's turn it into something worth sharing.<br/>I'm always up for an interesting conversation.</p><div class="contact-actions"><a class="contact-email" id="contact-email" href="mailto:hello@yourdomain.com">hello@yourdomain.com <span>↗</span></a><button id="copy-email" class="copy-btn" type="button">Copy email <span>⧉</span></button></div></div></div></section>
+  </main>
+
+  <footer class="footer shell"><div><span class="footer-brand">SJ<span>.</span></span><span>Made with curiosity & a lot of coffee.</span></div><div class="footer-right"><a id="github-link" href="https://github.com/sylvonjamesgonzaga" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a id="linkedin-link" href="#contact" hidden target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a><span>© <span id="year"></span> Sylvon James</span></div></footer>
+
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title"><div class="preview-topbar"><div class="preview-topbar-left"><button type="button" class="preview-close" id="preview-close" aria-label="Close preview">✕</button><span class="preview-separator"></span><div class="preview-ident"><span class="preview-kicker">DESIGN SHOWROOM / LIVE PREVIEW</span><strong id="preview-title">Horizon Finance</strong></div></div><div class="preview-devices" aria-label="Preview viewport"><button class="device-btn active" data-device="desktop" aria-label="Desktop viewport" title="Desktop viewport"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8m-4-4v4" stroke="currentColor" stroke-width="1.5"/></svg></button><button class="device-btn" data-device="tablet" aria-label="Tablet viewport" title="Tablet viewport"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M11 19h2" stroke="currentColor" stroke-width="1.5"/></svg></button><button class="device-btn" data-device="mobile" aria-label="Mobile viewport" title="Mobile viewport"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M11 19h2" stroke="currentColor" stroke-width="1.5"/></svg></button></div><div class="preview-topbar-right"><a class="preview-open" id="preview-external" href="#" target="_blank" rel="noopener noreferrer">Open full site ↗</a><a class="preview-figma" id="preview-figma" href="#" target="_blank" rel="noopener noreferrer" hidden>Open in Figma ↗</a></div></div><div class="preview-viewport" id="preview-viewport"><div class="preview-frame-wrap" id="preview-frame-wrap"><iframe id="preview-frame" title="Interactive project preview" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div><div class="preview-footbar"><span><span class="live-dot"></span> INTERACTIVE PREVIEW</span><span id="preview-description">Explore the clickable design.</span><button type="button" id="preview-next">Next concept →</button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
