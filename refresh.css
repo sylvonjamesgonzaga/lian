@@ -11,3 +11,4 @@ html{scroll-padding-top:110px}body{-webkit-font-smoothing:antialiased}h1,h2,h3,p
 
 .art-label-top{top:100px;right:25px;white-space:nowrap}
 .about-art-corner,.about-art-footer{color:var(--muted)}.about-giant-s{opacity:.7;text-shadow:10px 15px 0 color-mix(in srgb,var(--accent) 12%,transparent)}.about-giant-s span{color:var(--accent2)}.about-art:before,.about-art:after{border-color:var(--line-strong)}.preview-close{background:var(--panel2);border-color:var(--line)}.preview-kicker{color:var(--muted)}.preview-devices{border-color:var(--line)}.preview-open,.preview-figma{background:var(--accent);color:var(--bg);border:1px solid var(--accent)}.preview-footbar button{color:var(--accent)}.project-overview-dialog::backdrop{background:#29273680}.hero-art{contain:paint}
+.about-cta{color:var(--bg)}
