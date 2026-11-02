@@ -25,11 +25,14 @@ function renderProjectArt(art) {
 }
 function renderProjects() {
   $('#project-grid').innerHTML = data.projects.map(project => {
-    const projectUrl = safeUrl(project.url);
-    const action = projectUrl
-      ? `<a class="project-card-action" href="${safe(projectUrl)}" target="_blank" rel="noopener noreferrer">Visit project <span>↗</span></a>`
-      : `<button type="button" class="project-card-action" data-project="${safe(project.number)}">Project overview <span>↗</span></button>`;
-    return `<article class="project-card reveal"><div class="project-art ${safe(project.art)}"><span class="art-chip">${safe(project.category)}</span>${renderProjectArt(project.art)}</div><div class="project-card-content"><div class="project-card-meta"><span class="proj-num">/ ${safe(project.number)}</span><span>FEATURED PROJECT</span></div><h3>${safe(project.title)}</h3><p>${safe(project.summary)}</p><div class="tag-list">${project.tags.map(t=>`<span class="tag">${safe(t)}</span>`).join('')}</div>${action}</div></article>`;
+    const demoUrl = safeUrl(project.previewUrl || project.url);
+    const action = demoUrl
+      ? `<a class="project-card-action" href="${safe(demoUrl)}" target="_blank" rel="noopener noreferrer">Open working demo <span>↗</span></a>`
+      : `<button type="button" class="project-card-action" data-project="${safe(project.number)}">Concept overview <span>↗</span></button>`;
+    const art = demoUrl
+      ? `<iframe class="project-demo-frame" src="${safe(demoUrl)}" loading="lazy" tabindex="-1" title="Live thumbnail of ${safe(project.title)}" aria-hidden="true"></iframe>`
+      : renderProjectArt(project.art);
+    return `<article class="project-card reveal"><div class="project-art live-demo ${safe(project.art)}"><span class="art-chip">${safe(project.category)}</span>${art}</div><div class="project-card-content"><div class="project-card-meta"><span class="proj-num">/ ${safe(project.number)}</span><span>INTERACTIVE CONCEPT DEMO</span></div><h3>${safe(project.title)}</h3><p>${safe(project.summary)}</p><div class="tag-list">${project.tags.map(t=>`<span class="tag">${safe(t)}</span>`).join('')}</div>${action}</div></article>`;
   }).join('');
   $$('[data-project]').forEach(button => button.addEventListener('click', () => openProject(button.dataset.project)));
 }
@@ -64,9 +67,11 @@ function renderIdentity() {
   $('#hero-location').innerHTML = `${safe(data.location.toUpperCase())} <span>↗</span>`;
   $('#about-name').textContent = data.name.split(' ')[0] + '.';
   $('#about-description').textContent = data.about;
-  $('#contact-email').textContent = data.email;
+  $('#contact-email').textContent = data.email || 'Contact details forthcoming';
   const arrow = document.createElement('span'); arrow.textContent = ' ↗'; $('#contact-email').append(arrow);
-  $('#contact-email').href = `mailto:${data.email}`;
+  $('#contact-email').href = data.email ? `mailto:${data.email}` : '#contact';
+  $('#contact-email').hidden = !data.email;
+  $('#copy-email').hidden = !data.email;
   $('#github-link').href = safeUrl(data.github) || '#contact';
   if (safeUrl(data.linkedin)) { $('#linkedin-link').href=safeUrl(data.linkedin); $('#linkedin-link').hidden=false; }
   if (safeUrl(data.resumeUrl)) { $('#resume-link').href = safeUrl(data.resumeUrl); $('#resume-link').hidden = false; }
