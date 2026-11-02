@@ -45,3 +45,6 @@ body{background:var(--bg)}
 @media(max-width:700px){.hero{min-height:auto}.hero h1{font-size:clamp(46px,11vw,74px)}.project-demo-frame{width:155%;height:155%;transform:scale(.58)}.project-art{min-height:260px}}
 @media(max-width:400px){.hero h1{font-size:44px}.project-art{min-height:235px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Hidden contact actions must remain invisible even with component display rules. */
+.contact-email[hidden],.copy-btn[hidden]{display:none!important}
