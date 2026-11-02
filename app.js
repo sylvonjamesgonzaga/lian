@@ -159,15 +159,6 @@ function setupInteractions() {
     try {await navigator.clipboard.writeText(data.email);toast('Email copied to clipboard!');}
     catch{toast(`Email: ${data.email}`);}
   });
-  const storedTheme=(()=>{try{return localStorage.getItem('sj-theme')}catch{return null}})();
-  if(storedTheme==='light') document.documentElement.dataset.theme='light';
-  const updateThemeLabel=()=>$('#theme-toggle').setAttribute('aria-label',document.documentElement.dataset.theme==='light'?'Switch to dark theme':'Switch to light theme');
-  updateThemeLabel();
-  $('#theme-toggle').addEventListener('click',()=>{
-    const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';
-    try{localStorage.setItem('sj-theme',light?'light':'dark')}catch{}
-    updateThemeLabel();
-  });
   const halo=$('#cursor-halo');
   window.addEventListener('pointermove',event=>{if(event.pointerType!=='mouse')return;halo.style.opacity='1';halo.style.left=event.clientX+'px';halo.style.top=event.clientY+'px';},{passive:true});
   let ticking=false;
